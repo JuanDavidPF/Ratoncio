@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using ScriptableReferences.Float;
 using UnityEngine;
 
 public class MouseRotation : MonoBehaviour
 {
-    [SerializeField] private float rotationSensitivity = 400f;
+    [SerializeField] private FloatReference horizontalSensitivity;
     private Transform m_transform;
     private float m_mouseX;
 
@@ -16,7 +17,7 @@ public class MouseRotation : MonoBehaviour
 
     private void Update()
     {
-        m_mouseX = Input.GetAxis("Mouse X") * rotationSensitivity * Time.deltaTime;
+        m_mouseX = Input.GetAxis("Mouse X") * horizontalSensitivity.value * Time.deltaTime;
         m_transform.Rotate(Vector3.up * m_mouseX);
     }//Closes LateUpdate method
 

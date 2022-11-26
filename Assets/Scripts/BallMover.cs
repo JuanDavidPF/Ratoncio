@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using ScriptableReferences.Float;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
@@ -13,8 +14,8 @@ public class BallMover : MonoBehaviour
     [Space(20)]
     [Header("Ball")]
     [SerializeField] private Rigidbody m_ballRB;
-    [SerializeField] float ballSpeed = 10f;
-    [SerializeField] float jumpForce = 10f;
+    [SerializeField] FloatReference ballSpeed;
+    [SerializeField] FloatReference jumpForce;
 
 
     [Space(20)]
@@ -63,7 +64,7 @@ public class BallMover : MonoBehaviour
 
     private void Jump()
     {
-        m_ballRB.AddForce(new Vector3(0, jumpForce, 0), ForceMode.Impulse);
+        m_ballRB.AddForce(new Vector3(0, jumpForce.value, 0), ForceMode.Impulse);
 
     }//Closes Jump method
 
@@ -74,7 +75,7 @@ public class BallMover : MonoBehaviour
 
         float y = m_CameraT.position.y;
         move = m_CameraT.TransformDirection(move.normalized);
-        m_ballRB.AddTorque(move * ballSpeed);
+        m_ballRB.AddTorque(move * ballSpeed.value);
 
     }//Closes HandleBallMovement method
 

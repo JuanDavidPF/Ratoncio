@@ -1,0 +1,16 @@
+{
+    "name": "Ratoncio",
+    "rootNamespace": "Ratoncio",
+    "references": [
+        "GUID:aff6a6b3293fe95449384f45d12bf228"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
