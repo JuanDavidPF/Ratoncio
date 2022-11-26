@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd341d20278799447a4f2a4829a32a26, type: 3}
-  m_Name: Vector3_BallVelocity
+  m_Name: Vector3_BallPhysicalVelocity
   m_EditorClassIdentifier: 
   _value: {x: 0, y: 0, z: 0}

@@ -17,6 +17,8 @@ namespace Ratoncio
         private void Awake()
         {
             m_progressBar = GetComponent<Image>();
+
+
         }//Closes Awake method
 
         public void UpdateProgress(float value)

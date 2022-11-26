@@ -2319,6 +2319,40 @@ Transform:
   m_Father: {fileID: 387733184}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1539123889 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 77615079, guid: 0639541500b3d8e489fe1fd701df68ca,
+    type: 3}
+  m_PrefabInstance: {fileID: 2671054222844250047}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1539123895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539123889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d00d0f01920074448aa5e6438f4b39ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  events: 1
+  processes:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 2f70f9df11be8454fbe8d5e1bd887e77, type: 2}
+        m_TargetAssemblyTypeName: ScriptableReferences.Float.FloatVariable, ScriptableReferences
+        m_MethodName: set_value
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1540197745
 GameObject:
   m_ObjectHideFlags: 0
@@ -3019,6 +3053,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 77615079, guid: 0639541500b3d8e489fe1fd701df68ca, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 77615084, guid: 0639541500b3d8e489fe1fd701df68ca, type: 3}
+      propertyPath: fuelCapacity.useConstant
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 99703502, guid: 0639541500b3d8e489fe1fd701df68ca, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1283771335, guid: 0639541500b3d8e489fe1fd701df68ca, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2493803235821499550, guid: 0639541500b3d8e489fe1fd701df68ca,
         type: 3}
       propertyPath: m_RootOrder
@@ -3074,10 +3124,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2810814820442620172, guid: 0639541500b3d8e489fe1fd701df68ca,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3012930656615034404, guid: 0639541500b3d8e489fe1fd701df68ca,
         type: 3}
       propertyPath: m_Name
       value: Hamster Ball
+      objectReference: {fileID: 0}
+    - target: {fileID: 5374753155229638965, guid: 0639541500b3d8e489fe1fd701df68ca,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0639541500b3d8e489fe1fd701df68ca, type: 3}
