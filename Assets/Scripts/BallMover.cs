@@ -16,6 +16,8 @@ namespace Ratoncio
         [SerializeField] private Vector3Reference ballVelocity;
         [SerializeField] private BoolReference isGrounded;
 
+        [SerializeField] private FloatReference boostForce;
+        [SerializeField] private BoolReference isBoosting;
 
         [Space(20)]
         [Header("Misc")]
@@ -44,6 +46,7 @@ namespace Ratoncio
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.Space) && isGrounded.value) Jump();
+            else if (isBoosting.value) Fly();
         }//Closes Update method
 
         private void FixedUpdate()
@@ -59,13 +62,32 @@ namespace Ratoncio
 
         }//Closes Jump method
 
+        private void Fly()
+        {
+            m_ballRB.AddForce(new Vector3(0, boostForce.value, 0), ForceMode.Force);
+        }//Closes Fly method
         private void HandleBallMovement()
         {
-            if (!isGrounded.value || !m_CameraT) return;
-            Vector3 move = new Vector3(Input.GetAxis("Vertical"), 0, -Input.GetAxis("Horizontal")).normalized;
-            move = m_CameraT.TransformDirection(move);
+            if ((!isGrounded.value && !isBoosting.value) || !m_CameraT) return;
 
-            m_ballRB.AddTorque(move * ballSpeed.value);
+            Vector3 move = Vector3.zero;
+
+            if (isBoosting.value)
+            {
+                move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")).normalized;
+                move = m_CameraT.TransformDirection(move);
+                move.y = 0;
+                m_ballRB.AddForce(move * ballSpeed.value, ForceMode.Force);
+            }
+            else
+            {
+                move = new Vector3(Input.GetAxis("Vertical"), 0, -Input.GetAxis("Horizontal")).normalized;
+                move = m_CameraT.TransformDirection(move);
+                move.y = 0;
+                m_ballRB.AddTorque(move * ballSpeed.value);
+
+            }
+
 
         }//Closes HandleBallMovement method
 
