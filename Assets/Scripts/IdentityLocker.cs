@@ -2,19 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IdentityLocker : MonoBehaviour
+namespace Utilities
 {
-    public bool IsActive;
-    private Quaternion identity;
-    private Transform m_transform;
-    private void Awake()
+    public class IdentityLocker : MonoBehaviour
     {
-        m_transform = transform;
-        identity = Quaternion.identity;
-    }//Closes Awake method
-    private void Update()
-    {
-        if (IsActive) m_transform.rotation = identity;
+        public bool IsActive;
+        private Quaternion identity;
+        private Transform m_transform;
+        private void Awake()
+        {
+            m_transform = transform;
+            identity = Quaternion.identity;
+        }//Closes Awake method
+        private void Update()
+        {
+            if (IsActive) m_transform.rotation = identity;
 
-    }//Closes Update method
-}//Closes RotationLocker method
+        }//Closes Update method
+    }//Closes RotationLocker method
+}//Close namespace declaration

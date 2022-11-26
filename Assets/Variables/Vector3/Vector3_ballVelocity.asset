@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17e71d22391efac489a8ebf075ce07e8, type: 3}
-  m_Name: Float_HamsterSpeed
+  m_Script: {fileID: 11500000, guid: bd341d20278799447a4f2a4829a32a26, type: 3}
+  m_Name: Vector3_ballVelocity
   m_EditorClassIdentifier: 
-  _value: 175
+  _value: {x: 0, y: 0, z: 0}

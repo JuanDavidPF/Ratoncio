@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using ScriptableReferences.Float;
+using ScriptableReferences.Vectors;
 using UnityEngine;
 
 public class MouseRotation : MonoBehaviour
 {
     [SerializeField] private FloatReference horizontalSensitivity;
+
+
     private Transform m_transform;
     private float m_mouseX;
 

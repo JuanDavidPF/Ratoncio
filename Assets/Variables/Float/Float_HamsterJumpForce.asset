@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17e71d22391efac489a8ebf075ce07e8, type: 3}
   m_Name: Float_HamsterJumpForce
   m_EditorClassIdentifier: 
-  _value: 65
+  _value: 80
